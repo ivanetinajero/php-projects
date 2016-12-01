@@ -1,0 +1,46 @@
+[0] => Array ( 
+	[id] => 51264b30027c55ee43000156 
+	[checkItemStates] => Array ( ) 
+	[closed] => [dateLastActivity] => 2014-01-07T20:07:14.074Z 
+	[desc] => 
+	[descData] => 
+	[email] => 
+	[idBoard] => 51264b083ebf031f63000089 
+	[idList] => 51264b083ebf031f6300008a 
+	[idMembersVoted] => Array ( ) 
+	[idShort] => 1 
+	[idAttachmentCover] => 
+	[manualCoverAttachment] => 
+	[name] => Crear una nueva interfaz para la busqueda, hice un grid.jsp, ahi implementer esta nueva interfaz con jquery. o bien con bootstrap. Ya baje toda la carpeta del server... 
+	[pos] => 65535 
+	[shortLink] => LyMROMht 
+	[badges] => Array ( 
+		[votes] => 0 
+		[viewingMemberVoted] => 
+		[subscribed] => 
+		[fogbugz] => 
+		[checkItems] => 0 
+		[checkItemsChecked] => 0 
+		[comments] => 0 
+		[attachments] => 0 
+		[description] => [due] => 
+	) 
+	[due] => 
+	[idChecklists] => Array ( ) 
+	[idMembers] => Array ( 
+
+	) 
+	
+	[labels] => Array ( 
+
+	) 
+	[shortUrl] => https://trello.com/c/LyMROMht 
+	[subscribed] => 
+
+	[url] => https://trello.com/c/LyMROMht/1-crear-una-nueva-interfaz-para-la-busqueda-hice-un-grid-jsp-ahi-implementer-esta-nueva-interfaz-con-jquery-o-bien-con-bootstrap-y 
+
+	[attachments] => Array 
+	( 
+	
+	) 
+)

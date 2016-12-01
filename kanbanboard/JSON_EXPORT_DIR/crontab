@@ -1,0 +1,8 @@
+# JimFlowKlopfer will run every 5 minutes
+*/1 * * * * python -m jimflowklopfer.__main__ /var/www/kanbanboard/FTP_IMPORT_DIR/ /var/www/kanbanboard/JSON_EXPORT_DIR/ >> /var/www/kanbanboard/FTP_IMPORT_DIR/jimflow.log
+
+# Update Trello boards every 5 minutes
+*/1 * * * * /var/www/kanbanboard/JSON_EXPORT_DIR/trelloCron.sh
+
+# Compilar jimflow
+#itinajero@desktop:~/applications$ sudo pip install --upgrade JimFlowKlopfer/

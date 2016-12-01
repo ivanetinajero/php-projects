@@ -1,0 +1,36 @@
+Al momento de intentar instalar pecl install oauth el ubuntu 14.04 tira este error:
+
+sudo pecl install oauth
+[sudo] password for bigdata: 
+downloading oauth-1.2.3.tgz ...
+Starting to download oauth-1.2.3.tgz (45,531 bytes)
+.............done: 45,531 bytes
+could not extract the package.xml file from "/build/buildd/php5-5.5.9+dfsg/pear-build-download/oauth-1.2.3.tgz"
+Download of "pecl/oauth" succeeded, but it is not a valid package archive
+Error: cannot download "pecl/oauth"
+Download failed
+install failed
+
+
+Segun lo que lei en varios foros, es un bug probable con el gzip, ya que si baja los tgz, pero de ahi sigue descomprimirlos y ahi es posible que tire el error, por lo cual hay que hacerlo manualmente de esta forma :
+
+
+This workaround seems to work for me (still playing around with it). It probably also works for "pear install".
+========
+# First run pear to download the packages. It will probably put the packages into
+# /build/buildd/php5-5.5.9+dfsg/pear-build-download/
+# but it can't install them.
+$ pear upgrade
+
+# Un-Gzip the downloaded packages.
+$ gunzip /build/buildd/php5-5.5.9+dfsg/pear-build-download/*.tar o bin tgz
+
+# Now pear should be able to work with the pure tar-files.
+$ sudo pear upgrade /build/buildd/php5-5.5.9+dfsg/pear-build-download/*.tar
+========
+
+So by this workaround I guess, the bug's reason is something about the gzip compression.
+
+
+
+

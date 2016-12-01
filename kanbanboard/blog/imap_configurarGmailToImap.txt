@@ -1,0 +1,32 @@
+Para poder conectarnos via imap a Gmail, hay que configurarlo
+
+
+Nos logueamos en Gmail:
+
+ Nos vamos al icono en forma de engrane,  que esta a la derecha, seleccionamos Cofiguracion
+
+
+Seleccionamos Reenvio y correo POP/IMAP
+
+Vamos a la seccion de IMAP
+
+ Seleccionamos Habilitar IMAP
+
+
+ Guardamos cambios
+
+
+Tambien es necesario configurar aspectos de seguridad en nuestra cuenta,
+
+vamos a:
+
+https://www.google.com/settings/security/lesssecureapps
+
+Seleccionamos seguridad
+
+Permitimos el acceso de aplicaicones menos seguras
+
+De no tenerlas habilitadas, nos estara enviando errores de conexion y mensajes en nuestro correo, de accesos no autorizados.
+
+
+

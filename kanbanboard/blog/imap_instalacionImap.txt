@@ -1,0 +1,63 @@
+Instalar el modulo de php5-imap de la siguiente forma:
+
+ sudo apt-get install php5-imap
+
+Habilitarlo
+
+ sudo php5enmod imap
+
+Agregar la extension impa.so en php.ini en la seccion de Dynamic Extensions
+ 
+ sudo nano /etc/php5/apache2/php.ini
+
+ Añadir esta linea: 
+ extension= imap.so
+
+
+Reiniciar apache
+
+ sudo service apache2 restart
+
+ 
+Tambien hay que verificar que se tenga habilitado sss, lo podemos hacer con el phpinfo desde el explorador
+o bien por consola:
+
+ echo '<?php phpinfo(); ?>' | php 2>&1 |grep -i ssl
+
+
+Igualmente podemos verificar que se haya habilitado imap en apache con la siguiente instruccion:
+
+echo '<?php phpinfo(); ?>' | php 2>&1 |grep -i imap
+
+
+
+En el archivo que estara conectandose via imap a gmail, hay que agregar nuestro usuario y contraseña
+
+asi como la carpeta donde deseemos mandar los archivos
+
+Ese script lo tomamos de : 
+
+
+http://www.codediesel.com/php/downloading-gmail-attachments-using-php/
+
+Se cambio la linea : 
+ 
+/* get all new emails. If set to 'ALL' instead 
+ * of 'NEW' retrieves all the emails, but can be 
+ * resource intensive, so the following variable, 
+ * $max_emails, puts the limit on the number of emails downloaded.
+ * 
+ */
+$emails = imap_search($inbox,'UNSEEN');
+
+estaba usando el criterio NEW  y ALL, pero solo deseamos los mensajes no leidos, UNSEEN indica que solo hay que bajar esos
+
+mas documentacion acerca de imap en :
+
+http://php.net/manual/es/ref.imap.php
+
+
+
+ 
+ 
+

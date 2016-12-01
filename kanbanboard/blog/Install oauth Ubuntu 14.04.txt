@@ -1,0 +1,34 @@
+Author: itinajero
+Tested un Ubuntu 14.04 LTS
+
+Before installing the OAuth make sure your apt-get is updated properly ?  else try to run those command which will update the apt-get also install the PECL support	
+	$ sudo apt-get update 
+	$ sudo apt-get install php-pear php5-dev
+
+After that you need to run pecl install command for Oauth
+	$ sudo pecl install oauth
+
+After that add oauth entry in "/etc/php5/apache2/php.ini" file
+	extension=oauth.so
+
+Final and most important step restart your apache
+	$ sudo /etc/init.d/apache2 restart
+
+Error
+Missing pcre.h when installing pecl_oauthsudo 
+I was playing with pecl_oauth last week (more about that in a later post) and when I tried to install from PECL, it grabbed the files, ran the configure 
+step but stopped with an error status during make. This is bad news for those of us who are ubuntu users rather than compile-happy linux users! 
+Closer inspection showed this line around the point things started to go wrong:
+	Error: /usr/include/php5/ext/pcre/php_pcre.h:29:18: error: pcre.h: No such file or directory
+
+I didn't have the header files for pcre installed - in ubuntu the headers are in the -dev packages so I just installed what I needed:
+	$ sudo apt-get install libpcre3-dev
+
+Enable oauth in CLI
+1. Add oauth extension in "/etc/php5/cli/php.ini" file
+	extension=oauth.so
+
+2. Restart Apache2.
+
+That's all
+
