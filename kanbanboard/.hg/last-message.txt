@@ -1,1 +1,0 @@
-Actualizando ruta del cron
